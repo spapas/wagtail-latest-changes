@@ -1,0 +1,19 @@
+{% extends "wagtailadmin/pages/listing/_list_explore.html" %}
+
+{% load i18n wagtailadmin_tags %}
+
+{% block post_parent_page_headers %}
+<tr>
+<th>Title</th>
+<th>Last update</th>
+<th>Kind</th>
+<th>Status</th>
+<th>Owner / last publish / last edit</th>
+</tr>
+{% endblock %}
+
+{% block page_navigation %}
+    <td>
+        {{ page.owner }} / {{ page.live_revision.user }} / {{ page.get_latest_revision.user }}
+    </td>
+{% endblock %}
