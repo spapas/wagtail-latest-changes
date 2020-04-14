@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from wagtail.admin.views.reports import ReportView
+from wagtail.admin.auth import permission_denied
 from wagtail.core.models import UserPagePermissionsProxy
 from wagtail.core.models import Page
 
